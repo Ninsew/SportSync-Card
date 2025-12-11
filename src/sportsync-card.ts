@@ -205,7 +205,7 @@ export class SportSyncCard extends LitElement {
     const minutesUntil = (startTime.getTime() - this._currentTime.getTime()) / (1000 * 60);
     const isStartingSoon = !isLive && minutesUntil > 0 && minutesUntil <= (this._config.starting_soon_minutes || 15);
     const showIcon = this._config.show_sport_icon;
-    const channelLogo = this._getChannelLogo(event.channel);
+    const channelLogo = event.channel_logo || this._getChannelLogo(event.channel);
 
     let itemClass = 'event-item';
     if (isLive) itemClass += ' live';
@@ -288,7 +288,7 @@ export class SportSyncCard extends LitElement {
     const isLive = event.is_live || this._isCurrentlyLive(event);
     const startTime = new Date(event.start_time);
     const endTime = event.end_time ? new Date(event.end_time) : null;
-    const channelLogo = this._getChannelLogo(event.channel);
+    const channelLogo = event.channel_logo || this._getChannelLogo(event.channel);
 
     return html`
       <div class="popup-overlay open" @click=${this._closePopup}>
@@ -646,7 +646,7 @@ export class SportSyncCardEditor extends LitElement {
         <ha-select
           label="Entity"
           .value=${this._config.entity}
-          @selected=${this._valueChanged}
+          @closed=${this._valueChanged}
           .configValue=${'entity'}
         >
           ${entities.map(
@@ -760,6 +760,12 @@ export class SportSyncCardEditor extends LitElement {
       value = Number(value);
     } else if (target.tagName === 'HA-SWITCH') {
       value = (target as unknown as { checked: boolean }).checked;
+    }
+
+    // Prevent unnecessary updates when value hasn't changed
+    const currentValue = this._config[target.configValue as keyof SportSyncCardConfig];
+    if (currentValue === value) {
+      return;
     }
 
     const newConfig = {

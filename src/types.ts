@@ -120,50 +120,6 @@ export const SPORT_NAMES: Record<string, string> = {
   other: 'Övrigt',
 };
 
-// Swedish TV channel logos (using publicly available logos)
-export const CHANNEL_LOGOS: Record<string, string> = {
-  // SVT
-  'SVT1': 'https://upload.wikimedia.org/wikipedia/commons/thumb/8/8c/SVT1_logo_2016.svg/200px-SVT1_logo_2016.svg.png',
-  'SVT2': 'https://upload.wikimedia.org/wikipedia/commons/thumb/a/a3/SVT2_logo_2016.svg/200px-SVT2_logo_2016.svg.png',
-  'SVT': 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/41/SVT_Logo_2006.svg/200px-SVT_Logo_2006.svg.png',
-
-  // TV4
-  'TV4': 'https://upload.wikimedia.org/wikipedia/commons/thumb/7/7a/TV4_logo_2023.svg/200px-TV4_logo_2023.svg.png',
-  'TV4 Sport': 'https://upload.wikimedia.org/wikipedia/en/thumb/d/d1/TV4_Sport_logo.svg/200px-TV4_Sport_logo.svg.png',
-  'TV4+': 'https://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/TV4_Plus_logo.svg/200px-TV4_Plus_logo.svg.png',
-
-  // Viaplay / V Sport
-  'V Sport': 'https://upload.wikimedia.org/wikipedia/commons/thumb/b/bf/V_Sport_logo.svg/200px-V_Sport_logo.svg.png',
-  'V Sport 1': 'https://upload.wikimedia.org/wikipedia/commons/thumb/b/bf/V_Sport_logo.svg/200px-V_Sport_logo.svg.png',
-  'V Sport 2': 'https://upload.wikimedia.org/wikipedia/commons/thumb/b/bf/V_Sport_logo.svg/200px-V_Sport_logo.svg.png',
-  'V Sport Premium': 'https://upload.wikimedia.org/wikipedia/commons/thumb/b/bf/V_Sport_logo.svg/200px-V_Sport_logo.svg.png',
-  'V Sport Hockey': 'https://upload.wikimedia.org/wikipedia/commons/thumb/b/bf/V_Sport_logo.svg/200px-V_Sport_logo.svg.png',
-  'V Sport Fotboll': 'https://upload.wikimedia.org/wikipedia/commons/thumb/b/bf/V_Sport_logo.svg/200px-V_Sport_logo.svg.png',
-  'Viasat Sport': 'https://upload.wikimedia.org/wikipedia/commons/thumb/b/bf/V_Sport_logo.svg/200px-V_Sport_logo.svg.png',
-  'Viaplay': 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/Viaplay_logo.svg/200px-Viaplay_logo.svg.png',
-
-  // C More
-  'C More': 'https://upload.wikimedia.org/wikipedia/commons/thumb/6/64/C_More_logo.svg/200px-C_More_logo.svg.png',
-  'C More Live': 'https://upload.wikimedia.org/wikipedia/commons/thumb/6/64/C_More_logo.svg/200px-C_More_logo.svg.png',
-  'C More Fotboll': 'https://upload.wikimedia.org/wikipedia/commons/thumb/6/64/C_More_logo.svg/200px-C_More_logo.svg.png',
-  'C More Hockey': 'https://upload.wikimedia.org/wikipedia/commons/thumb/6/64/C_More_logo.svg/200px-C_More_logo.svg.png',
-  'C More Sport': 'https://upload.wikimedia.org/wikipedia/commons/thumb/6/64/C_More_logo.svg/200px-C_More_logo.svg.png',
-
-  // Eurosport
-  'Eurosport': 'https://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/Eurosport_Logo_2015.svg/200px-Eurosport_Logo_2015.svg.png',
-  'Eurosport 1': 'https://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/Eurosport_Logo_2015.svg/200px-Eurosport_Logo_2015.svg.png',
-  'Eurosport 2': 'https://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/Eurosport_Logo_2015.svg/200px-Eurosport_Logo_2015.svg.png',
-
-  // Discovery / Max
-  'Discovery+': 'https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/Discovery%2B_logo.svg/200px-Discovery%2B_logo.svg.png',
-  'Max': 'https://upload.wikimedia.org/wikipedia/commons/thumb/c/ce/Max_logo.svg/200px-Max_logo.svg.png',
-
-  // Other channels
-  'TV3': 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/32/TV3_Sweden_logo.svg/200px-TV3_Sweden_logo.svg.png',
-  'TV6': 'https://upload.wikimedia.org/wikipedia/commons/thumb/2/2e/TV6_Sweden_logo.svg/200px-TV6_Sweden_logo.svg.png',
-  'Kanal 5': 'https://upload.wikimedia.org/wikipedia/commons/thumb/1/16/Kanal_5_Sweden_logo.svg/200px-Kanal_5_Sweden_logo.svg.png',
-  'Kanal 9': 'https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Kanal_9_Sweden_logo.svg/200px-Kanal_9_Sweden_logo.svg.png',
-
-  // Sportkanalen
-  'Sportkanalen': 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/41/SVT_Logo_2006.svg/200px-SVT_Logo_2006.svg.png',
-};
+// Channel logos fallback map - primarily uses channel_logo from event data
+// This is empty since Wikimedia blocks hotlinking - logos come from SportSync integration
+export const CHANNEL_LOGOS: Record<string, string> = {};
