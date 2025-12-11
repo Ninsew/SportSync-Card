@@ -2,5 +2,6 @@
   "name": "SportSync Card",
   "render_readme": true,
   "filename": "sportsync-card.js",
-  "content_in_root": false
+  "content_in_root": false,
+  "homeassistant": "2023.1.0"
 }
